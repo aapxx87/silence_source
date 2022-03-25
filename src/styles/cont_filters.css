@@ -1,0 +1,36 @@
+.container_filters {
+  width: 100%;
+  border: 1px solid gray;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.container_filters-text {
+  margin: 5px 0 15px 0;
+  text-align: center;
+}
+
+
+
+
+/* ----- TAG CLOUD CONTAINER ----- */
+.container_filters-fiters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 10px;
+}
+
+/* ----- TAG CLOUD ITEMS ----- */
+.tag-item {
+  padding: 10px 20px;
+  border: 1px solid gray;
+  border-radius: 50px;
+}
+
+.clicked {
+  background-color: #316A85;
+  border: 1px solid #316A85;
+}
+
+
