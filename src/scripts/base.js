@@ -69,7 +69,7 @@ export const base_arr = [
     link: 'https://cdnb.artstation.com/p/assets/images/images/019/313/289/large/henry-wong-134b.jpg?1562924426',
     pinterest_link: 'https://www.pinterest.ru/pin/714031715932684127/',
     origin_link: 'https://www.artstation.com/artwork/QzB1Ld',
-    tags: ['summer', 'montains']
+    tags: ['summer', 'mountains']
   },
   {
     link: 'https://i.pinimg.com/564x/0c/2b/f1/0c2bf1c90eb9ce4d0d544d1f4e222095.jpg',
