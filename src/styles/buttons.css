@@ -3,6 +3,7 @@
   background-color: transparent;
   border: 1px solid rgb(204, 204, 204);
   border-radius: 50px;
+  width: 120px;
 }
 
 
@@ -11,17 +12,35 @@
 }
 
 
-.btn-reset {
-  display: inline-block;
-  background-color: rgb(143, 61, 61);
-  border: 1px solid rgb(143, 61, 61);
-  margin-top: 10px;
+.btn-reset, .btn-close {
+  display: block;
 }
 
-.btn_change_visible {
-  width: 25px;
-  height: 25px;
-  background-color: antiquewhite;
+.btn-close {
+  margin: 15px auto 25px auto;
+}
+
+.btn-reset {
+  /* display: inline-block; */
+  background-color: rgb(143, 61, 61);
+  border: 1px solid rgb(143, 61, 61);
+  margin: 15px auto;
+}
+
+
+.btn_filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid antiquewhite;
+  border-radius: 50%;
+  font-size: 30px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  color: black;
+  
 }
 
 

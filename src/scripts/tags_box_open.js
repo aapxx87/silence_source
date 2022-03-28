@@ -1,9 +1,17 @@
 export const tags_box_open = 17
 
-const btnChangeVisible = document.querySelector('.js-btn_change_visible_folters')
-const filterBox = document.querySelector('.fiters_box')
 
-btnChangeVisible.addEventListener('click', function () {
-  filterBox.classList.toggle('open')
+const containerFilters = document.querySelector('.container_filters')
+const btnOpenTags = document.querySelector('.js-btn_filters')
+const btnCloseTags = document.querySelector('.js-btn-close')
+
+
+btnOpenTags.addEventListener('click', function () {
+  containerFilters.classList.add('open')
+})
+
+
+btnCloseTags.addEventListener('click', function () {
+  containerFilters.classList.remove('open')
 })
 

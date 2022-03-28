@@ -10,11 +10,16 @@
 }
 .container_filters {
   position: fixed;
-  top: 0;
+  bottom: 0;
   width: 100%;
-  margin-bottom: 20px;
   padding: 10px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 10;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
 }
 
 .container_filters-text {
@@ -22,7 +27,7 @@
   font-size: 23px;
   font-weight: bold;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -50,7 +55,6 @@
 }
 
 .fiters_box {
-  display: none;
   margin-top: 15px;
 }
 
@@ -65,6 +69,7 @@
   background-color: transparent;
   border: 1px solid rgb(204, 204, 204);
   border-radius: 50px;
+  width: 120px;
 }
 
 
@@ -73,21 +78,46 @@
 }
 
 
+.btn-reset, .btn-close {
+  display: block;
+}
+
+.btn-close {
+  margin: 15px auto 25px auto;
+}
+
 .btn-reset {
-  display: inline-block;
+  /* display: inline-block; */
   background-color: rgb(143, 61, 61);
   border: 1px solid rgb(143, 61, 61);
-  margin-top: 10px;
-}
-
-.btn_change_visible {
-  width: 25px;
-  height: 25px;
-  background-color: antiquewhite;
+  margin: 15px auto;
 }
 
 
+.btn_filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid antiquewhite;
+  border-radius: 50%;
+  font-size: 30px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  color: black;
+  
+}
 
+
+
+.container_btnFilters {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
 * {
   padding: 0;
   margin: 0;
@@ -104,10 +134,10 @@ body {
 
 .app {
   max-width: 400px;
-  height: 1000px;
+  height: 100vh;
   margin: 0 auto;
   position: relative;
-  padding-top: 70px;
+  /* padding-top: 20px; */
 }
 
 

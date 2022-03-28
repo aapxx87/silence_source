@@ -1,10 +1,15 @@
 .container_filters {
   position: fixed;
-  top: 0;
+  bottom: 0;
   width: 100%;
-  margin-bottom: 20px;
   padding: 10px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 10;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
 }
 
 .container_filters-text {
@@ -12,7 +17,7 @@
   font-size: 23px;
   font-weight: bold;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -40,7 +45,6 @@
 }
 
 .fiters_box {
-  display: none;
   margin-top: 15px;
 }
 
