@@ -36,6 +36,7 @@ tagCloudButtons.forEach(function (el, idx) {
 
 
 
+
 const change_tagCloud_style = function (idx) {
   tagCloudButtons[idx].classList.toggle('clicked')
 }
@@ -103,7 +104,9 @@ const create_filter_imgItems_arr = function (arr) {
 
   })
 
-  const uniqui_values_img = new Set(filter_imgItems_arr)
+  const shuffleArr = shuffleArray(filter_imgItems_arr)
+
+  const uniqui_values_img = new Set(shuffleArr)
 
   return uniqui_values_img
 
@@ -132,6 +135,23 @@ const render = function (arr) {
 }
 
 
+
+
+// The Fisher-Yates algorith
+const shuffleArray = function (arr) {
+
+  let array = arr
+
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+
+  return array
+
+}
 
 
 
