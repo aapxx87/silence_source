@@ -1,5 +1,6 @@
 import { base_arr } from './base'
 import { render_html_tags, create_list_of_tags } from './render_tags'
+import { define_focus_img, exit_img_view } from './focus_on_picture'
 export const x = 5;
 
 render_html_tags(create_list_of_tags(base_arr))
@@ -7,6 +8,7 @@ render_html_tags(create_list_of_tags(base_arr))
 const container_img = document.querySelector('.container_img')
 const tagCloudButtons = document.querySelectorAll('.js-tag-item')
 const btn_reset = document.querySelector('.js-btn-reset')
+
 
 
 let filters_active_arr = []
@@ -29,6 +31,14 @@ tagCloudButtons.forEach(function (el, idx) {
     create_filters_value_arr(filter_value, css_class)
 
     render(create_filter_imgItems_arr(filters_active_arr))
+
+    define_focus_img()
+
+    exit_img_view()
+
+
+
+
 
   })
 

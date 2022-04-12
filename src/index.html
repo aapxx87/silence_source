@@ -11,9 +11,16 @@
 <body>
 
 
+  <!-- ROOT CONTAINER -->
   <div class="app">
 
 
+    <!-- CONTAINER WITH FEED -->
+    <div class="container_img"></div>
+
+
+
+    <!-- CONTAINER WITH TAGS -->
     <div class="container_filters">
 
       <div class="container_filters-text">
@@ -25,10 +32,16 @@
         <div class="container_filters-fiters js_tags_box">
         </div>
 
-
         <div class="container_filters-buttons">
-          <a class="btn btn-reset js-btn-reset">Reset</a>
-          <a class="btn btn-close js-btn-close">Close</a>
+
+          <a class="btn btn-reset js-btn-reset">
+            <ion-icon name="backspace-outline" class="btnFilters_ico btnFilters_ico_reset"></ion-icon>
+          </a>
+
+          <a class="btn btn-close js-btn-close">
+            <ion-icon name="arrow-down-outline" class="btnFilters_ico btnFilters_ico_exit"></ion-icon>
+          </a>
+
         </div>
 
       </div>
@@ -36,16 +49,48 @@
     </div>
 
 
-    <div class="container_img"></div>
 
 
+    <!-- CONTAINER WITH BTN TAGS -->
     <div class="container_btnFilters">
-      <div class="btn_filters js-btn_filters">/</div>
+      <div class="btn_filters js-btn_filters">
+        <ion-icon name="pricetags-outline" class="btnFilters_ico"></ion-icon>
+      </div>
     </div>
 
 
 
+
+
+    <!-- CONTAINER PROFILE IMAGE -->
+    <div class="container_profile_img">
+
+      <img class="profile_img">
+
+      <div class="profile_actions_box">
+
+        <div class="profile_links">
+          <ion-icon name="logo-pinterest" class="profile_link"></ion-icon>
+          <ion-icon name="link-outline" class="profile_link"></ion-icon>
+        </div>
+
+        <div class="profile_btn_up">
+          <ion-icon name="arrow-up-outline" class="arrow-up-outline"></ion-icon>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
   </div>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
 </body>
