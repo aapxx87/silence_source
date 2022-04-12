@@ -1,5 +1,6 @@
 import { base_arr } from './base'
 import { render_html_tags, create_list_of_tags } from './render_tags'
+import { define_focus_img, exit_img_view } from './focus_on_picture'
 export const x = 5;
 
 render_html_tags(create_list_of_tags(base_arr))
@@ -7,6 +8,7 @@ render_html_tags(create_list_of_tags(base_arr))
 const container_img = document.querySelector('.container_img')
 const tagCloudButtons = document.querySelectorAll('.js-tag-item')
 const btn_reset = document.querySelector('.js-btn-reset')
+
 
 
 let filters_active_arr = []
@@ -30,9 +32,18 @@ tagCloudButtons.forEach(function (el, idx) {
 
     render(create_filter_imgItems_arr(filters_active_arr))
 
+    define_focus_img()
+
+    exit_img_view()
+
+
+
+
+
   })
 
 })
+
 
 
 
@@ -103,7 +114,9 @@ const create_filter_imgItems_arr = function (arr) {
 
   })
 
-  const uniqui_values_img = new Set(filter_imgItems_arr)
+  const shuffleArr = shuffleArray(filter_imgItems_arr)
+
+  const uniqui_values_img = new Set(shuffleArr)
 
   return uniqui_values_img
 
@@ -132,6 +145,23 @@ const render = function (arr) {
 }
 
 
+
+
+// The Fisher-Yates algorith
+const shuffleArray = function (arr) {
+
+  let array = arr
+
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+
+  return array
+
+}
 
 
 

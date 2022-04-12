@@ -1,15 +1,17 @@
 .container_filters {
+  max-width: 390px;
   position: fixed;
   bottom: 0;
   width: 100%;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.7);
-  display: none;
   z-index: 10;
   border-top-left-radius: 70px;
   border-top-right-radius: 70px;
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
+  transform: translateY(100%);
+  transition: .4s;
 }
 
 .container_filters-text {
@@ -49,7 +51,7 @@
 }
 
 .open {
-  display: block;
+  transform: translateY(0);
 }
 
 
